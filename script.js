@@ -1,6 +1,12 @@
 function addToDisplay(value) {
-    document.getElementById("display").value += value;
+  let displayValue = document.getElementById("display").value;
+  if (value === "." && displayValue.includes(".")) {
+    return;
   }
+    
+  document.getElementById("display").value += value;
+}
+
   
   function clearDisplay() {
     document.getElementById("display").value = "";
